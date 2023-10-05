@@ -33,7 +33,7 @@ li > div, li > a {
 .menu {
 	display: flex;
 	list-style: none;
-	color:maroon;
+	color:white;
 	align-items: flex-start;
 	
 	width:90%;
@@ -55,7 +55,7 @@ li > div, li > a {
 }
 
 .menu-item:hover > .menu-title {
-	text-shadow:  10px 10px 5px red;
+	text-shadow:  10px 10px 5px silver;
 }
 
 .menu-item:hover > .sub-menu {

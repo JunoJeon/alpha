@@ -40,7 +40,7 @@
 	left: 0px;
 	
 	opacity: 0.3;
-	box-shadow: 0px 0px 100px 50px hotpink;
+	box-shadow: 0px 0px 10px 5px aqua;
 }
 
 .front {
@@ -94,12 +94,12 @@ body {
 <section class="perspective">
 	<article class="cube">
 		<div class="base">Base</div>
-		<div class="base front">Front</div>
-		<div class="base back">Back</div>
-		<div class="base left">Left</div>
-		<div class="base right">Right</div>
-		<div class="base top">Top</div>
-		<div class="base bottom">Bottom</div>
+		<div class="base front"> </div>
+		<div class="base back"> </div>
+		<div class="base left"> </div>
+		<div class="base right"> </div>
+		<div class="base top"> </div>
+		<div class="base bottom"> </div>
 	</article>
 </section>
 </body>
