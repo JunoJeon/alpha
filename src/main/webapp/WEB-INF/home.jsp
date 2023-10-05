@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>submenu5.jsp</title>
+<title>home.jsp</title>
+<link rel="icon" type="image/png" href="favicon.png"/>
 <link rel="stylesheet" href="/css/cube.css">
 <style type="text/css">
 
