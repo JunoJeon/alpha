@@ -150,7 +150,7 @@ window.onload = function() {
 	<li class="menu-item">
 		<div class="menu-title">Animation</div>
 		<ol class="sub-menu">
-			<li class="sub-menu-item"><a target="content" href="/ani/cube">cube</a></li>
+			<li class="sub-menu-item"><a target="content" href="/cube.jsp">cube</a></li>
 			<li class="sub-menu-item"><a target="content" href="/ani/fill">fill</a></li>
 			<li class="sub-menu-item"><a target="content" href="/ani/cross">cross</a></li>
 		</ol>
