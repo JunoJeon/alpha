@@ -169,8 +169,6 @@ window.onload = function() {
 			<li class="sub-menu-item"><a target="content" href="/city/list">city</a></li>
 			<li class="sub-menu-item"><a target="content" href="/country/list">country</a></li>
 			<li class="sub-menu-item"><a target="content" href="/language/list">language</a></li>
-			<li class="sub-menu-item"><a target="content" href="/people/list">people</a></li>
-			<li class="sub-menu-item"><a target="content" href="/list/list">list</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">
