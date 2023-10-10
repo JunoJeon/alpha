@@ -119,17 +119,17 @@ function clearBtn_click(e) {
 </table>
 <hr>
 <!-- 전통적 For문 형태로 표면을 만들어 보세요  id="surface2" -->
-<table id="surface2">
-	<tbody>
-	<c:forEach var="i" begin="0" end="19">
-		<tr>
-		<c:forEach var="j" begin="0" end="39">
-			<c:set var="alpha" value="${surface[i][j]}"/>
-			<td>${alpha.ch}</td>
-		</c:forEach>
-		</tr>
-	</c:forEach>
-	</tbody>
-</table>
+<!-- <table id="surface2"> -->
+<!-- 	<tbody> -->
+<%-- 	<c:forEach var="i" begin="0" end="19"> --%>
+<!-- 		<tr> -->
+<%-- 		<c:forEach var="j" begin="0" end="39"> --%>
+<%-- 			<c:set var="alpha" value="${surface[i][j]}"/> --%>
+<%-- 			<td>${alpha.ch}</td> --%>
+<%-- 		</c:forEach> --%>
+<!-- 		</tr> -->
+<%-- 	</c:forEach> --%>
+<!-- 	</tbody> -->
+<!-- </table> -->
 </body>
 </html>
