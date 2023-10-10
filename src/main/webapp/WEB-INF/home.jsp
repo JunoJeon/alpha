@@ -74,6 +74,16 @@ li > div, li > a {
 	font-size: 15pt;
 }
 
+.menu-maintitle {
+	padding: 10px;
+	font-size: 15pt;
+}
+
+.menu-maintitle > a {
+	color: white;
+	text-decoration: none;
+}
+
 .menu-title:hover + .sub-menu {
 	display: block;
 }
@@ -172,12 +182,21 @@ window.onload = function() {
 		</ol>
 	</li>
 	<li class="menu-item">
+		<div class="menu-title">Aws</div>
+		<ol class="sub-menu">
+			<li class="sub-menu-item"><a target="content" href="/aws.jsp">aws</a></li>
+		</ol>
+	</li>
+	<li class="menu-item">
+		<div class="menu-maintitle"><a target="content" href="main.jsp">Main</a></div>
+	</li>
+	<li class="menu-item">
 	 <div  class="menu-title">Login</div>
 	</li>
 </ul>
 </nav>
 
-<iframe src="/alpha/fill" 
+<iframe src="main.jsp" 
 		name="content"
 		width="100%"
 		scrolling ="no"
