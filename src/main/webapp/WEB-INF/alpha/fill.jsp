@@ -14,11 +14,33 @@
 	border-collapse: collapse;
 	border-top: 15px solid cyan;
 	background: url('/media/slime.png');
+	margin-left: 250px;
 }
 
 #surface td {
 	opacity: 0.5;
 }
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
+body {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+#count {
+	margin-bottom:10px;
+	margin-left: 250px;
+	color : white;
+}
+
+#start {
+	margin-left: 450px;
+}
+
 </style>
 
 <script type="text/javascript">
@@ -87,11 +109,10 @@ function clearBtn_click(e) {
 </head>
 <body>
 <h1>Spring MVC + XMLHttpRequest</h1>
-<hr>
 <button id="start" onclick="startBtn_click(event)">start</button>
 <button id="clear" onclick="clearBtn_click(event)">clear</button>
 <hr>
-<table border="1" width="480px">
+<table id="count" border="1" width="480px">
 	<thead>
 		<tr>
 			<th>forCount</th><th>Count</th><th>seconds</th>
@@ -105,7 +126,6 @@ function clearBtn_click(e) {
 		</tr>
 	</tbody>
 </table>
-<hr>
 <table id="surface" onmousedown = event.preventDefault();>
 	<tbody>
 	<c:forEach var="row" items="${surface}"> <!--row는 1차원배열이다-->
@@ -117,7 +137,6 @@ function clearBtn_click(e) {
 	</c:forEach>
 	</tbody>
 </table>
-<hr>
 <!-- 전통적 For문 형태로 표면을 만들어 보세요  id="surface2" -->
 <!-- <table id="surface2"> -->
 <!-- 	<tbody> -->

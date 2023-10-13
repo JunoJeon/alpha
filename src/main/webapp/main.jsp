@@ -14,7 +14,6 @@ h1 {
  font-size : 5em;
  padding : 500px 0;
  color: white;
- background: teal;
 }
 </style>
 </head>

@@ -15,6 +15,7 @@
  	background-image: url('/img/whale.png');/*url('/img/BackgroundFront.png'), url('/img/BackgroundBack.png'); */
 	background-size: 100%;
 	background-repeat: no-repeat;
+	margin-left: 180px;
 	
 }
 #surface td {
@@ -23,19 +24,44 @@
 }
 
 #startBtn{
-	padding: 5px 10px;
+	padding: 10px 30px;
 	border : #F6DDFF;
 	background-color: #F6DDFF;
+	margin-bottom:10px;
+	margin-left:400px;
+	color : gray;
 }
 
 #clearBtn{
-	padding: 5px 10px;
+	padding: 10px 30px;
 	border : #F6DDFF;
 	background-color: #F6DDFF;
+	color : gray;
 }
+
+#count {
+	margin-bottom:10px;
+	margin-left: 250px;
+	color : white;
+}
+
+#stat {
+	color : white;
+}
+
 
 section > table {
 	float : left;
+}
+
+body {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+h1 {
+	text-align: center;
+	color: white;
 }
 </style>
 <script type="text/javascript">
@@ -181,7 +207,7 @@ window.onload = function() {
 <button id="startBtn" onclick="startBtn_click(event)">start</button>
 <button id="clearBtn" onclick="clearBtn_click(event)">clear</button>
 <hr>
-<table border = "1" width = "400">
+<table id="count" border = "1" width = "400">
 	<thead>
 		<tr>
 			<th>roundCount</th>

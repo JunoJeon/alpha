@@ -33,13 +33,14 @@ li > div, li > a {
 .menu {
 	display: flex;
 	list-style: none;
-	color:white;
+	color:	#9D71BD;
 	align-items: flex-start;
 	
 	width:90%;
 	position: fixed;
 	top: 10px;
 	left: 10px;
+	text-align: center;
 }
 
 .menu-logo {
@@ -49,9 +50,10 @@ li > div, li > a {
 }
 
 .menu-item {
-	width: 150px; 
+	width: 200px;
+	height : auto;
 	flex-shrink: 0;  /*화면을 줄여도 flex를 줄이지 않는다*/
-	background : teal;
+	background : #ddddff;
 }
 
 .menu-item:hover > .menu-title {
@@ -80,7 +82,7 @@ li > div, li > a {
 }
 
 .menu-maintitle > a {
-	color: white;
+	color: #9D71BD;
 	text-decoration: none;
 }
 
@@ -104,16 +106,21 @@ li > div, li > a {
 	padding: 10px;
 	font-size: 12pt;
 	text-decoration: none;
-	color: black;
+	color: gray;
 }
 
 .sub-menu-item:hover > a {
-	background: orange;
-	color: green;
+	background: #9D71BD;
+	color: white;
 }
 
 iframe {
 	margin-top : 100px;
+}
+
+body {
+	background-image: url("/img/pastell.jpg");
+	background-size: 100%;
 }
 </style>
 <script type="text/javascript">
@@ -163,6 +170,7 @@ window.onload = function() {
 			<li class="sub-menu-item"><a target="content" href="/cube.jsp">cube</a></li>
 			<li class="sub-menu-item"><a target="content" href="/ani/fill">fill</a></li>
 			<li class="sub-menu-item"><a target="content" href="/ani/cross">cross</a></li>
+			<li class="sub-menu-item"><a target="content" href="jquery_attr.jsp">placehorder</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">

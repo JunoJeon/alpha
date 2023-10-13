@@ -9,6 +9,8 @@
 <style type="text/css">
 body {
 	background-image: url('/img/totoro.png'), url('/img/neco.png') ; 
+	margin: 0 auto;
+	width: 1000px;
 }
 
 #surface {
@@ -16,11 +18,19 @@ body {
 	font-family: monospace;
 	font-size: 150%;
 	
-	border: 10px outset red;
+	border: 10px outset #d2d2ff;
+	margin-left: 30%;
 }
 
 #surface td {
 	opacity: 0.9;
+}
+
+#createBtn {
+	margin-left: 50%;
+	background-color: pink;
+	padding : 10px 30px;
+	
 }
 </style>
 <script type="text/javascript">
@@ -111,7 +121,7 @@ window.onload = () => {
 </script>
 </head>
 <body>
-<h1 style="border: 1px solid; color : cyan; background: black;">async / await + class</h1>
+<h1 style="color : #9D71BD; background: #ddddff; text-align: center;">async / await + class</h1>
 <hr>
 <button id="createBtn">create</button>
 <hr>

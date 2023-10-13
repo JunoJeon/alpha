@@ -5,6 +5,37 @@
 <head>
 <meta charset="UTF-8">
 <title>aws.jsp</title>
+<style type="text/css">
+ol > li > a {
+	display: block;
+	font-size: 20pt;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+ol, ul {
+
+	list-style: none;
+	
+}
+ul > li > a {
+	display: block;
+	font-size: 20pt;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+}
+
+body {
+	margin: 0 auto;
+	width: 1000px;
+}
+</style>
 </head>
 <body>
 <h1>AWS 클라우드 운영서버</h1>
@@ -20,14 +51,14 @@
 	<li><a target="_blank" href="http://3.34.130.200:8080/">정문섭</a></li>
 	<li><a target="_blank" href="http://54.180.86.93:8080/">조아라</a></li>
 	<li><a target="_blank" href="http://3.35.233.142:8080/">유현석</a></li>
+	<li><a target="_blank" href="http://52.79.91.22:8080/">유희석</a></li>
 	<li><a target="_blank" href="http://43.200.180.153:8080/">하종범</a></li>
+	<li><a target="_blank" href="http://13.125.84.10:8080/">한준모</a></li>
 </ol>
 <hr>
 <ul>
 	<li><a target="_blank" href="_">오영창</a></li>
-	<li><a target="_blank" href="http://52.79.91.22:8080/">유희석</a></li>
 	<li><a target="_blank" href="_">임유빈</a></li>
-	<li><a target="_blank" href="http://14.37.8.141:8080/">한준모</a></li>
 </ul>
 </body>
 </html>
