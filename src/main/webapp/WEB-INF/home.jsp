@@ -174,6 +174,14 @@ window.onload = function() {
 		</ol>
 	</li>
 	<li class="menu-item">
+		<div class="menu-title">React</div>
+		<ol class="sub-menu">
+			<li class="sub-menu-item"><a target="content" href="/fill.jsp">fill</a></li>
+			<li class="sub-menu-item"><a target="content" href="/race.jsp">race</a></li>
+			<li class="sub-menu-item"><a target="content" href="/zigzag.jsp">zigzag</a></li>
+		</ol>
+	</li>
+	<li class="menu-item">
 		<div class="menu-title">Employee</div>
 		<ol class="sub-menu">
 			<li class="sub-menu-item"><a target="content" href="/dept/list">dept</a></li>
