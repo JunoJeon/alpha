@@ -39,7 +39,7 @@
 	color : gray;
 }
 
-#count {
+#fullcount {
 	margin-bottom:10px;
 	margin-left: 250px;
 	color : white;
@@ -207,7 +207,7 @@ window.onload = function() {
 <button id="startBtn" onclick="startBtn_click(event)">start</button>
 <button id="clearBtn" onclick="clearBtn_click(event)">clear</button>
 <hr>
-<table id="count" border = "1" width = "400">
+<table id="fullcount" border = "1" width = "400">
 	<thead>
 		<tr>
 			<th>roundCount</th>

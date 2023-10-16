@@ -38,8 +38,8 @@ li > div, li > a {
 	
 	width:90%;
 	position: fixed;
-	top: 10px;
-	left: 10px;
+	top: 0px;
+	left: 00px;
 	text-align: center;
 }
 

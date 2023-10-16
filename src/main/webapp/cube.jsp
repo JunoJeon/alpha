@@ -10,7 +10,8 @@
 .perspective {
 /* 	border: 10px solid green; */
  	display: inline-block;
-	margin: 100px 0px 50px 100px;
+	margin: 300px 0px 50px 100px;
+	margin-left : 40%;
 	
 	perspective: 500px;
 }
@@ -27,8 +28,8 @@
 
 .base {
 /* 	border:10px solid red; */
-	width: 200px;
-	height: 200px;
+	width: 400px;
+	height: 400px;
 	font-size: 1em;
 	text-align: center;
 	line-height: 200px;
@@ -39,37 +40,37 @@
 	top: 0px;
 	left: 0px;
 	
-	opacity: 0.3;
-	box-shadow: 0px 0px 10px 5px aqua;
+	opacity: 0.5;
+	box-shadow: 0px 0px 10px 5px plum;
 }
 
 .front {
-	transform: translateZ(100px);
+	transform: translateZ(200px);
 	background: #FFB6C1;
 }
 
 .back {
-	transform: rotateY(180deg) translateZ(100px);
+	transform: rotateY(180deg) translateZ(200px);
 	background: #87CEFA;
 }
 
 .left {
-	transform: rotateY(-90deg) translateZ(100px);
+	transform: rotateY(-90deg) translateZ(200px);
 	background: lime;
 }
 
 .right {
-	transform: rotateY(90deg) translateZ(100px);
+	transform: rotateY(90deg) translateZ(200px);
 	background: #EE82EE;
 }
 
 .top {
-	transform: rotateX(90deg) translateZ(100px);
+	transform: rotateX(90deg) translateZ(200px);
 	background: yellow;
 }
 
 .bottom {
-	transform: rotateX(-90deg) translateZ(100px);
+	transform: rotateX(-90deg) translateZ(200px);
 	background: orange;
 }
 
@@ -83,7 +84,14 @@
 }
 
 body {
+	margin : 100px auto;
+	width : 1000px;
 	height: 1000px;
+}
+
+h1 {
+	text-align : center;
+	color: white;
 }
 
 </style>
@@ -93,7 +101,7 @@ body {
 <hr>
 <section class="perspective">
 	<article class="cube">
-		<div class="base">Base</div>
+		<div class="base"> </div>
 		<div class="base front"> </div>
 		<div class="base back"> </div>
 		<div class="base left"> </div>
