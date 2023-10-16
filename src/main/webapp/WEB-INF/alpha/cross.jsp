@@ -11,6 +11,7 @@ body {
 	background-image: url('/img/totoro.png'), url('/img/neco.png') ; 
 	margin: 0 auto;
 	width: 1000px;
+	height: 800px;
 }
 
 #surface {
@@ -30,7 +31,6 @@ body {
 	margin-left: 50%;
 	background-color: pink;
 	padding : 10px 30px;
-	
 }
 </style>
 <script type="text/javascript">

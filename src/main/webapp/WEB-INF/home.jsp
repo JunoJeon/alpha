@@ -139,19 +139,18 @@ window.onload = function() {
 </script>
 </head>
 <body>
-<hr>
 <nav>
 <ul class="menu">
 	<li class="menu-logo">
 		<section class="perspective">
 		<article class="cube">
-		<div class="base">Alpha</div>
-		<div class="base front">A</div>
-		<div class="base back">B</div>
-		<div class="base left">C</div>
-		<div class="base right">D</div>
-		<div class="base top">E</div>
-		<div class="base bottom">F</div>
+		<div class="base">Juno</div>
+		<div class="base front"></div>
+		<div class="base back"></div>
+		<div class="base left"></div>
+		<div class="base right"></div>
+		<div class="base top"></div>
+		<div class="base bottom"></div>
 		</article>
 		</section>
 	</li>

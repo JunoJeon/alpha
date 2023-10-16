@@ -19,7 +19,7 @@
 	
 }
 #surface td {
-     opacity: 0.4;
+     opacity: 0.7;
      
 }
 
