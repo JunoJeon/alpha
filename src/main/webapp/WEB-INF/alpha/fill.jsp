@@ -31,7 +31,7 @@ body {
 	width: 1000px;
 }
 
-#count {
+#fullcount {
 	margin-bottom:10px;
 	margin-left: 250px;
 	color : white;
@@ -65,7 +65,7 @@ function startBtn_click(e) {
 		
 		let xhr = new XMLHttpRequest();
 		xhr.open('GET', '/alpha/data')
-		xhr.responseType = 'json'
+		xhr.responseType = 'json';
 		
 		xhr.onload = e => {
 			let alpha = xhr.response;
@@ -73,15 +73,16 @@ function startBtn_click(e) {
 			
 			let td = surface.rows[alpha.line-1].cells[alpha.column-1];
 			
-			if(td.style.color =='black' && td.style.background=='black') {
+			if (td.style.color=='black' && td.style.background=='black') {
 				count.innerText = ++count.innerText;
-			}
+			}		
+			
 			td.style.color = alpha.fg;
 			td.style.background = alpha.bg;
 			td.innerText = alpha.ch;
 		}
 		xhr.send();
-	}, 15)
+	}, 15);
 }
 
 function clearBtn_click(e) {
@@ -97,12 +98,12 @@ function clearBtn_click(e) {
 // 		}
 // 	}
 	
-	Array.from(surface.rows).forEach(function(row){
+	Array.from(surface.rows).forEach(function(row) {
 		Array.from(row.cells).forEach(function(td) {
 			td.style.color = 'black';
 			td.style.background = 'black';
-		})
-	})
+		});
+	});
 }
 
 </script>
@@ -112,17 +113,17 @@ function clearBtn_click(e) {
 <button id="start" onclick="startBtn_click(event)">start</button>
 <button id="clear" onclick="clearBtn_click(event)">clear</button>
 <hr>
-<table id="count" border="1" width="480px">
+<table id="fullcount" border="1" width="480px">
 	<thead>
 		<tr>
-			<th>forCount</th><th>Count</th><th>seconds</th>
+			<th>forCount</th><th>count</th><th>seconds</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td id="forCount" align="right">0</td>
-			<td id="count" align="right">0</td>
-			<td id="seconds" align="right">0</td>		
+			<td id="forCount" 	align="right">0</td>
+			<td id="count" 		align="right">0</td>
+			<td id="seconds" 	align="right">0</td>		
 		</tr>
 	</tbody>
 </table>
