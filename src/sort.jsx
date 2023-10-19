@@ -11,6 +11,7 @@ class Sort extends Alpha {
 	left = 0;
 	top = 0;
 	scale = 1;
+	degree = 0;
 
 	constructor() {
 		super();
@@ -58,12 +59,12 @@ class App extends React.Component {
 				this.state.surface[i][j].top = h*i;
 				this.state.surface[i][j].scale = 1;
 				this.forceUpdate();
-				await sleep(50);
+				await sleep(10);
 			}
 		}
 		await sleep(2000);
 		
-		await this.restore();
+		await this.restore1();
 	}
 	
 	async sort2() {
@@ -78,12 +79,12 @@ class App extends React.Component {
 				this.state.surface[i][j].top = h*i;
 				this.state.surface[i][j].scale = 1;
 				this.forceUpdate();
-				await sleep(50);
+				await sleep(10);
 			}
 		}
 		await sleep(2000);
 		
-		await this.restore();
+		await this.restore2();
 	}
 	
 	async sort3() {
@@ -98,27 +99,60 @@ class App extends React.Component {
 				this.state.surface[i][j].top = h*i;
 				this.state.surface[i][j].scale = 1;
 				this.forceUpdate();
-				await sleep(50);
+				await sleep(10);
 			}
 		}
 		await sleep(2000);
 		
-		await this.restore();
+		await this.restore3();
 	}
 	
-	async restore() {
-		for (let i=0; i<20; i++) {
-			for(let j=0; j<40; j++) {
-				this.state.surface[i][j].init();
-			}
-		}
-		this.forceUpdate();
-		await sleep(2000);
-		
-		this.state.disabled = false;
-		this.forceUpdate();
+	async restore1() {
+	  for (let i = 19; i >= 0; i--) {
+	    for (let j = 39; j >= 0; j--) {
+	      this.state.surface[i][j].init();
+	      this.state.surface[i][j].degree = 360*parseInt(Math.random()*10);
+	      this.forceUpdate();
+	      await sleep(10); // 모든 요소가 역순으로 초기 상태로 돌아가게 함
+	    }
+	  }
+	  await sleep(2000);
+	
+	  this.state.disabled = false;
+	  this.forceUpdate();
+	}
+
+	
+	async restore2() {
+	  for (let i = 0; i < 20; i++) {
+	    for (let j = 39; j >= 0; j--) {
+	      this.state.surface[i][j].init();
+	      this.state.surface[i][j].degree = 360*parseInt(Math.random()*10);
+	      this.forceUpdate();
+	      await sleep(10); // 각 요소를 역순으로 초기 상태로 돌아가게 함
+	    }
+	  }
+	  await sleep(2000);
+	
+	  this.state.disabled = false;
+	  this.forceUpdate();
 	}
 	
+	async restore3() {
+	  for (let i = 0; i < 20; i++) {
+	    for (let j = 0; j < 40; j++) {
+	      this.state.surface[i][j].init();
+	      this.state.surface[i][j].degree = 360*parseInt(Math.random()*10);
+	      this.forceUpdate();
+	      await sleep(10); // 각 요소를 역순으로 초기 상태로 돌아가게 함
+	    }
+	  }
+	  await sleep(2000);
+	
+	  this.state.disabled = false;
+	  this.forceUpdate();
+	}
+
 	sortNom = 1;
 	btnStart_click(e) {
 		
@@ -169,7 +203,7 @@ class App extends React.Component {
 													background:	v.bg,
 													top:		v.top,
 													left: 		v.left,
-													transform:  `scale(${v.scale})`,
+													transform:  `scale(${v.scale}) rotate(${v.degree}deg)`,
 													}} 
 													key={k}>
 													{v.ch} </td>
