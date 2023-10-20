@@ -6,13 +6,14 @@ import sleep from "es7-sleep"
 import $ from 'jquery'
 import "./css/ping.css"
 
-class Flow extends Alpha {
+class Ping extends Alpha {
 	
 	position = 'relative'
 	
 	left = 0;
 	top = 0;
 	
+	speed = 0;
 	constructor(w, h) {
 		super();
 		this.w = w;
@@ -40,12 +41,15 @@ class App extends React.Component {
 		
 		for(let i=0; i<20; i++) {
 			this.state.surface[i] = [];
+			let speed = Math.random()*50 + 10;
+			
 			for(let j=0; j<40; j++) {
-				let flow = new Flow(w, h);
-				flow.position = 'absolute';
-				flow.setLine(i);
-				flow.setColumn(j);
-				this.state.surface[i][j] = flow;
+				let ping = new Ping(w, h);
+				ping.speed = speed;
+				ping.position = 'absolute';
+				ping.setLine(i);
+				ping.setColumn(j);
+				this.state.surface[i][j] = ping;
 			}
 		}
 	}
@@ -56,21 +60,45 @@ class App extends React.Component {
 		rowNum : 0,
 	}
 	
-	btnUp_click(e) {
-		this.move(this.state.surface[this.state.rowNum], 1)
+	isStop = false;
+	
+	btnStart_click(e) {
+		this.state.disabled = true;
+		this.forceUpdate();
+		this.isStop = false;
+		for (let i=0; i<20; i++)
+			this.pingpong(this.state.surface[i]);
 	}
 	
-	btnRight_click(e) {
-		this.move(this.state.surface[this.state.rowNum], 2)
+	btnStop_click(e) {
+		this.state.disabled = false;
+		this.forceUpdate();
+		this.isStop = true;
 	}
 	
-	btnDown_click(e) {
-		this.move(this.state.surface[this.state.rowNum], 3)
-	}
-	
-	
-	btnLeft_click(e) {
-		this.move(this.state.surface[this.state.rowNum], 4)
+	async pingpong(body) {
+		
+		let isRight = true;
+		let head = body[body.length-1];
+		
+		for(;;) {
+			
+			if(isRight) 
+				this.move(body, 2)
+			else 
+				this.move(body, 4)
+			
+			await sleep(head.speed);
+			
+			if(head.column == 100) 
+				isRight = false;
+			else if(head.column == 0) 
+				isRight = true;
+			
+			if(this.isStop) {
+				break;
+			}
+		}
 	}
 	
 	move(body, direction) {
@@ -101,17 +129,8 @@ class App extends React.Component {
 	render() {
 		return(
 			<>
-			<button disabled={this.state.disabled} onClick = {event => this.btnLeft_click(event)}>Left</button>
-			<button disabled={this.state.disabled} onClick = {event => this.btnRight_click(event)}>Right</button>
-			<button disabled={this.state.disabled} onClick = {event => this.btnUp_click(event)}>Up</button>
-			<button disabled={this.state.disabled} onClick = {event => this.btnDown_click(event)}>Down</button>
-			<select onChange={event => this.state.rowNum = event.target.value}>
-			{
-				this.state.surface.map((row, i) =>
-					<option key = {i}>{i}</option>
-				)
-			}
-			</select>
+			<button disabled={this.state.disabled} onClick = {event => this.btnStart_click(event)}>Start</button>
+			<button disabled={!this.state.disabled} onClick = {event => this.btnStop_click(event)}>Stop</button>
 			<hr/>
 			<table id='surface' 
 				   className='collapse'
@@ -130,6 +149,7 @@ class App extends React.Component {
 													position :  v.position,
 													left : 		v.left,
 													top : 		v.top,
+													transition: `left ${v.speed}ms`
 													}} 
 													key={k}>
 													{v.ch} </td>
