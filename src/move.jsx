@@ -5,7 +5,6 @@ import { sprintf } from "sprintf-js"
 import sleep from "es7-sleep"
 import $ from 'jquery'
 import "./css/move.css"
-import { delay } from "underscore"
 
 class Move extends Alpha {
 	
