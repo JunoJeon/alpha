@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,10 +52,15 @@ li > div, li > a {
 }
 
 .menu-item {
-	width: 200px;
+	width: 150px;
 	height : auto;
 	flex-shrink: 0;  /*화면을 줄여도 flex를 줄이지 않는다*/
 	background : #ddddff;
+}
+
+.menu-item a {
+	text-decoration: none;
+	
 }
 
 .menu-item:hover > .menu-title {
@@ -66,7 +73,7 @@ li > div, li > a {
 	transition : max-height 1s;
 }
 
-.menu-item:last-child {
+.menu-item:nth-last-child(2) {
 	margin-left : auto;
 	margin-right: 10px;
 }
@@ -204,12 +211,28 @@ window.onload = function() {
 			<li class="sub-menu-item"><a target="content" href="/aws.jsp">aws</a></li>
 		</ol>
 	</li>
+<!-- 	<li class="menu-item"> -->
+<!-- 		<div class="menu-maintitle"><a target="content" href="main.jsp">Main</a></div> -->
+<!-- 	</li> -->
+	<sec:authorize access = "isAnonymous()">
 	<li class="menu-item">
-		<div class="menu-maintitle"><a target="content" href="main.jsp">Main</a></div>
+	 <div  class="menu-title">
+	 	<a href="/login">Login</a>
+	 </div>
+	</li>
+	</sec:authorize>
+	<sec:authorize access="isAuthenticated()">
+	<li class="menu-item">
+	 <div class="menu-title">
+	 	<a href="/logout">Logout</a>
+	 </div>
 	</li>
 	<li class="menu-item">
-	 <div  class="menu-title">Login</div>
+	 <div class="menu-title">
+	 	<a href="#"><sec:authentication property="name"/> </a>
+	 </div>
 	</li>
+	</sec:authorize>
 </ul>
 </nav>
 

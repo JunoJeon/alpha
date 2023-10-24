@@ -8,11 +8,11 @@
 <style type="text/css">
 h1 {
  width: 100%;
- height: 300px;
+ height: 150px;
  text-align: center;
  font-family : monospace;
  font-size : 5em;
- padding : 500px 0;
+ padding : 150px 0;
  color: white;
 }
 </style>

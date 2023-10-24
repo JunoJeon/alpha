@@ -29,7 +29,7 @@ window.onload = () => {
 </script>
 </head>
 <body>
-<h1>City List3</h1>
+<h1>City List</h1>
 <hr>
 <form action="/city/list">
 <fieldset>
