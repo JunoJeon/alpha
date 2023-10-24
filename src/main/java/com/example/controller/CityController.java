@@ -38,6 +38,6 @@ public class CityController {
 		var codes = mapper.selectConutryCodes();
 		model.addAttribute("codes", codes);
 		
-		return "/city/list";
+		return "city/list";
 	}
 }

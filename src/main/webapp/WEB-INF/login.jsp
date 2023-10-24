@@ -25,6 +25,11 @@ input {
 	color : red;
 	padding: 0.5em
 }
+
+#id, #pw {
+	border-width : 0 0 1px 0;
+	outline:none 
+}
 </style>
 </head>
 <body>
