@@ -220,6 +220,11 @@ window.onload = function() {
 	 	<a href="/login">Login</a>
 	 </div>
 	</li>
+	<li class="menu-item">
+	 <div class="menu-title">
+	 	<a href="#">Register</a>
+	 </div>
+	</li>
 	</sec:authorize>
 	<sec:authorize access="isAuthenticated()">
 	<li class="menu-item">
