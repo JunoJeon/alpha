@@ -20,13 +20,13 @@ import com.example.mapper.DeptMapper;
 import com.example.model.Dept;
 
 @Controller
-@RequestMapping("/rest/dept")
+@RequestMapping("/rest/dept")		//rest를 쓸때 가장 잘쓰는방식은 GET, POST, PUT, DELETE이다.
 public class RestDeptController {
 	
 	@Autowired
 	DeptMapper mapper;
 	
-	@GetMapping(headers = {"Accept=text/html"}) //getmapping는 두개가 중복될수없다. 그래서 Accept text/html을 줘서 주소로 접속시 뷰를 호출하게 만든다.
+	@GetMapping(headers = {"Accept=text/html"}) //GET은 두개가 중복될수없다. 그래서 Accept text/html을 줘서 주소로 접속시 뷰를 호출하게 만든다.
 	void view() {
 		
 	}

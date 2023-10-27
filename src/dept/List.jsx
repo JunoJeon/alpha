@@ -1,7 +1,8 @@
 import React from "react";
 import { sprintf } from "sprintf-js";
-import sleep from "es7-sleep"
+import sleep from "es7-sleep";
 import withRouter from "./withRouter";
+import { Link } from 'react-router-dom';
 
 class List extends React.Component {
 	constructor() {
@@ -33,6 +34,7 @@ class List extends React.Component {
 			<>
 			<h1>부서목록</h1>
 			<hr/>
+			<Link to="/rest/dept/insert">추가</Link>
 			<table border={1}>
 				<thead>
 				 <tr>
@@ -50,8 +52,8 @@ class List extends React.Component {
 							<td>{dept.deptno}</td>
 							<td>{dept.dname}</td>
 							<td>{dept.loc}</td>
-							<td><a href="">Updata</a></td>
-							<td>Delete</td>
+							<td><Link to="/rest/dept/update">수정</Link></td>
+							<td><Link to="/rest/dept/delete">삭제</Link></td>
 						</tr>
 					)
 				}
