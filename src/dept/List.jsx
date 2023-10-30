@@ -11,8 +11,6 @@ class List extends React.Component {
 		
 	}
 	
-	componentDidMount() { // 컨스트럭터 다음에 자동으로 호출된다. 초기화가 된 이후에 실행이된다.
-	}
 	
 	async init() {
 		let response = await fetch("/rest/dept");
@@ -52,8 +50,8 @@ class List extends React.Component {
 							<td>{dept.deptno}</td>
 							<td>{dept.dname}</td>
 							<td>{dept.loc}</td>
-							<td><Link to="/rest/dept/update">수정</Link></td>
-							<td><Link to="/rest/dept/delete">삭제</Link></td>
+							<td><Link to="/rest/dept/update" state={{dept: dept}}>수정</Link></td>
+							<td><Link to="/rest/dept/delete" state={{dept: dept}}>삭제</Link></td>
 						</tr>
 					)
 				}
